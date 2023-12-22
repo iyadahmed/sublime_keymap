@@ -1,0 +1,55 @@
+[
+	{
+		"keys": ["alt+shift+f"],
+		"command": "lsp_format_document",
+		"context": [
+			{
+				"key": "selector",
+				"operand": "source.python",
+				"operator": "equal"
+			}
+		]
+	},
+	{
+		"keys": ["alt+shift+f"],
+		"command": "js_prettier",
+		"context": [
+			{
+				"key": "selector",
+				"operand": "source.json | source.js | source.html",
+				"operator": "equal"
+			}
+		]
+	},
+	{ "keys": ["ctrl+`"], "command": "toggle_terminus_panel" },
+	{
+		"keys": ["f2"],
+		"command": "rename_file",
+		"context": [
+			{
+				"key": "control",
+				"operand": "sidebar_tree", // https://forum.sublimetext.com/t/how-do-you-browse-the-sidebar-file-browser-by-keyboard/6413/5
+				"operator": "equal"
+			}
+		]
+	},
+	{
+		// Thanks ChatGPT!
+		"keys": ["f2"],
+		"command": "lsp_symbol_rename",
+		"context": [
+			{
+				"key": "selector",
+				"operator": "equal",
+				"operand": "variable | function"
+			},
+			{
+				"key": "setting.is_widget",
+				"operator": "equal",
+				"operand": false
+			}
+		]
+	},
+	{ "keys": ["ctrl+k", "ctrl+b"], "command": "" },
+	{ "keys": ["ctrl+b"], "command": "toggle_side_bar" }
+]
